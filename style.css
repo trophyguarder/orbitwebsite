@@ -3544,7 +3544,7 @@ header {
   position: relative;
   z-index: 1; }
   .out-tem-wrap .row .col-xl-3:nth-child(2n) {
-    margin-top: 70px; }
+    margin-top: 0px; }
     @media (max-width: 1191px) {
       .out-tem-wrap .row .col-xl-3:nth-child(2n) {
         margin-top: 0; } }
