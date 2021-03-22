@@ -1,0 +1,19 @@
+.theme-btn {
+	color: $white;
+	@extend .gradient;
+	@extend .defaultA;
+	padding: 15px 30px;
+	border-radius: 35px;
+	line-height: 1;
+	
+	&:hover {
+		@extend .gradientHover;
+		color: $white;
+	}
+
+	i, img {
+		margin-left: 5px;
+		margin-top: -2px;
+	}
+
+}

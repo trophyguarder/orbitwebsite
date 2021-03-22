@@ -1,0 +1,20 @@
+.single-brand {
+	margin-top: 40px;
+	transition: .5s;
+	
+	img {
+		@include transition(.4s);
+	}
+
+	@media (max-width: 991px) {
+		width: 50%;
+		float: left;
+		text-align: center;
+	}
+
+	@media (max-width: 480px) {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+}

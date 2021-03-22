@@ -1,0 +1,101 @@
+/* ----------------------------------
+	Testimonial Section - Styles
+ ------------------------------------ */
+.testimonail-wrap {
+	background-image: -moz-linear-gradient( 0deg, rgb(52,181,191) 0%, rgb(33,12,89) 100%);
+	background-image: -webkit-linear-gradient( 0deg, rgb(52,181,191) 0%, rgb(33,12,89) 100%);
+	background-image: -ms-linear-gradient( 0deg, rgb(52,181,191) 0%, rgb(33,12,89) 100%);
+	position: relative;
+	z-index: 1;
+
+	.testimonial-bg {
+		@include before(-1);
+	}
+
+	.testimonial-list {
+		padding-top: 20px;
+		min-height: 443px;
+	}
+
+	.single-testimonial {
+		padding: 0px 30px 40px;
+		text-align: center;
+		position: relative;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin: 40px 0px 50px;
+		background-color: #fff;
+		border-radius: 10px;
+		opacity: .5;
+		transition: (transform 0.5s ease-in-out);
+
+		.client-img {
+			transform: translateY(-50%);
+			width: 80px;
+			height: 80px;
+			overflow: hidden;
+			border-radius: 50%;
+			margin: 0 auto;
+			background-color: rgb(202, 199, 215);
+			box-shadow: 0px 0px 15px 0px rgba(42, 35, 81, 0.2);
+
+			img {
+
+			}
+		}
+
+		.client-info{
+			margin-bottom: 15px;
+			h4 {
+
+			}
+			p {
+
+				span {
+					color: #22dd73;
+				}
+			}
+		}
+
+		p {
+			font-size: 12px;
+			line-height: 1.8;
+		}
+	}
+}
+
+.testimonail-wrap .single-testimonial::before, .testimonail-wrap .single-testimonial::after {
+    left: 0;
+    width: 80%;
+    content: "";
+    z-index: -2;
+    height: 52px;
+    bottom: -35px;
+    position: absolute;
+    border-radius: 10px;
+    background: #ffffff52;
+    transform: translateX(12%);
+    box-shadow: 0px 0px 25px 0px rgba(20, 27, 201, 0.05);
+}
+
+.testimonail-wrap .single-testimonial::before {
+    width: 90%;
+    bottom: -20px;
+    transform: translateX(5%);
+    background-color: #ffffffb0;
+    box-shadow: 0px 0px 25px 0px rgba(20, 27, 201, 0.05);
+    z-index: -1;
+}
+
+.testimonail-wrap .testimonial-list .slick-slide:not(.slick-current) {
+	transform: scale(0.8);
+}
+
+.single-testimonial.slick-slide.slick-current.slick-active.slick-center {
+    opacity: 1;
+
+    p {
+    	font-size: 14px;
+		line-height: 28px;
+    }
+}

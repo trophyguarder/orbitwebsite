@@ -1,0 +1,218 @@
+/* ----------------------------------
+	FAQ Section Styles
+ ------------------------------------ */
+.faq-wrap {
+
+}
+
+.single-faq-box {
+	margin-top: 30px;
+	border-radius: 5px;
+	padding-right: 30px;
+	padding: 40px 20px 30px;
+	@include transition(.4s);
+	background-color: $white;
+	box-shadow: 0px 0px 25px 0px rgba(20, 27, 201, 0.17);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	.faq-icon {
+		float: left;
+		overflow: hidden;
+		margin-right: 23px;
+	}
+	.faq-text {
+		overflow: auto;
+
+		h4 {
+			margin-bottom: 10px;
+			color: $second-color;
+			@include transition(.4s);
+		}
+
+		p {
+			line-height: 1.5;
+			font-size: .99rem;
+			text-transform: lowercase;
+			color: #555;
+			@include transition(.4s);
+		}
+	}
+
+	&::before {
+		border-radius: 5px;
+		background-image: -moz-linear-gradient( -45deg, rgb(251,0,83) 0%, rgb(248,90,41) 100%);
+		background-image: -webkit-linear-gradient( -45deg, rgb(251,0,83) 0%, rgb(248,90,41) 100%);
+		background-image: -ms-linear-gradient( -45deg, rgb(251,0,83) 0%, rgb(248,90,41) 100%);
+		position: absolute;
+		width: 100%;
+		height: 0%;
+		left: 0;
+		top: 0;
+		@include transition(.4s);
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+		content: "";
+	}
+
+	&:hover::before  {
+		height: 100%;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&:hover {
+		box-shadow: 0px 0px 25px 0px rgba(45, 21, 183, 0.05);
+		
+		h4, p {
+			color: $white;
+		}
+	}
+
+	@media (max-width: 430px) {
+		.faq-icon {
+			float: none;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.faq-text {
+			text-align: center;
+		}
+	}
+
+}
+
+
+
+.accordion-wrap {
+
+	.card {
+		z-index: 1;
+		border: none;
+		margin-top: 30px;
+		overflow: hidden;
+		position: relative;
+		box-shadow: 0 10px 14px 0 rgba(90,111,155,.05);
+
+		&.cbg {
+
+			.card-header { 
+				h2 {
+					button {
+						color: $white;
+					}
+				}
+			}
+
+			&::before {
+				left: 0;
+				bottom: 0;
+				opacity: .9;
+				content: "";
+				width: 97px;
+				z-index: -1;
+				height: 98px;
+				position: absolute;
+				animation-name: reval;
+				animation-duration: 1s;
+				background-repeat: no-repeat;
+				animation-fill-mode: backwards;
+				animation-timing-function: ease-in-out;
+				background-image: url('assets/img/shape/card-shape.png');
+			}
+
+			color: $white;
+			box-shadow: 0px 0px 25px 0px rgba(45, 21, 183, 0.1);
+			background-image: -moz-linear-gradient( -45deg, rgb(251,0,83) 0%, rgb(248,90,41) 100%);
+			background-image: -webkit-linear-gradient( -45deg, rgb(251,0,83) 0%, rgb(248,90,41) 100%);
+			background-image: -ms-linear-gradient( -45deg, rgb(251,0,83) 0%, rgb(248,90,41) 100%);
+		}
+
+		.card-header {
+			z-index: 1;
+			border: none;
+			min-height: 80px;
+			overflow: hidden;
+			position: relative;
+			border-radius: 5px;
+			@include transition(.5s);
+			background-color: #f74b380d;
+
+			&::before {
+				left: 0;
+				bottom: 0;
+				content: "";
+				opacity: .5;
+				z-index: -1;
+				height: 100%;
+				width: 100px;
+				position: absolute;
+				background-repeat: no-repeat;
+				background-position: right top;
+				background-image: url('assets/img/shape/circle.png');
+			}
+
+
+			h2 {
+				display: block;
+
+				&:hover {
+					text-decoration: none !important;
+				}
+
+				button {
+					width: 100%;
+					line-height: 1;
+					color: #333;
+					transition: .3s;
+					font-size: 18px;
+					text-align: left;
+					font-weight: 700;
+					position: relative;
+					display: inline-block;
+					text-decoration: none !important;
+
+
+					@media (max-width: 500px) {
+						line-height: 1.3;
+						font-size: 16px;
+					}
+
+					&.btn-link:hover, &.btn-link:active &.btn-link:focus {
+						text-decoration: none !important;
+					}
+					
+					&::before {
+						right: 0;
+						font-weight: 900;
+						content: "\f067";
+						position: absolute;
+						font-family:"Font Awesome 5 Pro";
+					}
+
+					&[aria-expanded="true"] {
+						&::before {
+							content: "\f068";
+						}
+					}
+				}
+			}
+		}
+
+		.card-body {
+			padding: 0px 30px;
+			padding-right: 150px;
+			padding-bottom: 30px;
+
+			@media (max-width: 991px) {
+				padding-right: 50px;
+			}
+
+			@media (max-width: 767px) {
+				padding-right: 30px;
+			}
+		}
+	}
+}

@@ -1,0 +1,86 @@
+.out-tem-wrap {
+	position: relative;
+	z-index: 1;
+
+	.row {
+		.col-xl-3:nth-child(2n) {
+			margin-top: 70px;
+
+			@media (max-width: 1191px) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.single-team-member {
+		margin-top: 40px;
+		border-radius: 10px;
+		background-color: $white;
+		@include transition(.4s);
+		box-shadow: 0px 0px 25px 0px rgba(20, 27, 201, 0.1);
+
+		&.active, &:hover {
+			background-image: -moz-linear-gradient( -45deg, rgb(251,0,83) 0%, rgb(248,90,41) 100%);
+			background-image: -webkit-linear-gradient( -45deg, rgb(251,0,83) 0%, rgb(248,90,41) 100%);
+			background-image: -ms-linear-gradient( -45deg, rgb(251,0,83) 0%, rgb(248,90,41) 100%);
+			box-shadow: 0px 0px 25px 0px rgba(45, 21, 183, 0.1);
+
+			.member {
+				&-info {
+					h4, span {
+						color: $white;
+					}
+				}
+			}
+
+			.social-profile-links {
+				a {
+					color: $white;
+				}
+			}
+			  
+		}
+
+		.member {
+			padding: 30px 30px 20px;
+
+			&-img {
+				width: 210px;
+				height: 210px;
+				margin: 0 auto;
+				overflow: hidden;
+				border-radius: 50%;
+				background-color: #d8d3ec;
+				box-shadow: 0px 0px 25px 0px rgba(20, 27, 201, 0.05);
+			}
+
+			&-info {
+				h4 {
+					margin-top: 25px;
+					color: $second-color;
+					text-transform: capitalize;
+				}
+
+				span {
+				}
+			}
+		}
+
+		.social-profile-links {
+			padding: 15px 30px;
+			border-top: 1px solid #fba995;
+			
+			a {
+				color: #797ec4;
+				font-size: 16px;
+				line-height: 16px;
+				margin-right: 20px;
+				@include transition(.3s);
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

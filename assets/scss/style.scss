@@ -1,0 +1,112 @@
+/*
+Template: Klaud - Web Domain & Hosting HTML5 Template
+Author: Keendevs
+Author URI: https://keendevs.com/
+Description: Web Domain & Hosting HTML Template.
+Version: 1.1.0
+*/
+
+
+/*
+=================================
+|***    Table of contents:   ***|
+=================================
+
+1. General styles
+2. Typography
+3. Helpers
+4. Preloader
+5. Go up button
+6. Header and navigation
+7. Hero Section / Hero Slider
+8. About us / Features
+9. Service
+10. Price
+11. Testimonial
+12. Map
+13. Content Block
+14. Faq Ask
+15. Contact Us
+16. Footer
+17. Responsive
+
+*/
+
+// BASIC
+@import 'basic';
+// MIXIN
+@import 'variables';
+// TYPOGRAPHY
+@import 'typography';
+// MIX
+@import 'mix';
+// HELPER
+@import 'helper';
+// ICON FONTS
+@import 'icon';
+// ANIMATION
+@import 'animation';
+// Button 
+@import 'btn';
+// Colors 
+@import 'colors';
+// Preloader 
+@import 'preloader';
+
+/* ----------------------------------
+	Template Section Styles
+ ------------------------------------*/
+
+// Menu - Header Section 
+@import 'header';
+
+// Hero Slide - Section 
+@import 'hero';
+
+// Features - Section 
+@import 'features';
+
+// Features - Section 
+@import 'services';
+
+// Features - Section 
+@import 'price';
+
+// Features - Section 
+@import 'map';
+
+// Features - Section 
+@import 'testimonial';
+
+// Call To Action - Section 
+@import 'cta';
+
+// Call To Action - Section 
+@import 'contentblock';
+
+// FAQ - Section 
+@import 'faq';
+
+// Why - Section 
+@import 'why';
+
+// Team - Section 
+@import 'team';
+
+// Contact Us - Section 
+@import 'contact';
+
+// Contact Us - Section 
+@import 'brand';
+
+// Contact Us - Section 
+@import 'footer';
+
+// write style code here 
+
+
+
+
+
+// Responsive
+@import 'responsive';
